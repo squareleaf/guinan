@@ -9,12 +9,11 @@ class ChihuahuasController < ApplicationController
 
   def update
     @dog = Chihuahua.find(params[:id])
-    if @dog.alive_time == nil
-      @dog.alive_time = 0
-      @dog.save
-    end
+
     @dog.alive_time += 1
+    @dog.mood = "😿"
     @dog.save
-    redirect_to chihuahuas_path
+
+    redirect_to edit_chihuahua_path(@dog.id)
   end
 end

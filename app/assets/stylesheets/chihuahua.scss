@@ -2,32 +2,90 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// =============
+// Color variables
+// =============
+
+$color-green-soft: #669e66;
+$color-charcoal: #202823;
+$color-tan: #a4855b;
+
+// ==============
+// List of all dogs
+// ==============
+.select-dog {
+  display: block;
+  width: 15%;
+  margin: 1em auto;
+  padding: 10px;
+  background-color: $color-green-soft;
+  color: $color-charcoal;
+  font-family: 'Mystery Quest', cursive;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+
+  &:before {
+   content: '🐾';
+   padding-right: 0.5em;
+  }
+}
+
+// ==============
+// Individual dog styles
+// ==============
 .dog {
   width: 300px;
-  margin: 2em auto;
-  font-family: 'Sedgwick Ave Display', cursive;
+  margin: 2em auto 1em;
+  background-color: rgba($color-tan, 0.2);
+  font-family: 'Mystery Quest', cursive;
   font-size: 2em;
   text-align: center;
-  border: 1px solid tan;
+  border: 5px solid $color-tan;
   border-radius: 5px;
 }
 
 .mood {
-  font-size: 5em;
   margin: 0;
   padding: 10px;
+  font-size: 5em;
 }
 
 h2 {
   padding: 10px;
-  font-face: 700;
+  margin: 0;
 }
 
 input {
-  background-color: brown;
-  color: white;
+  background-color: $color-green-soft;
+  color: $color-charcoal;
   padding: 10px 30px;
-  margin: 1em;
+  margin: 1em auto;
+  font-family: 'Mystery Quest', cursive;
+  font-size: 1em;
   border-radius: 10px;
   text-transform: uppercase; 
+}
+
+.return-button {
+  display: block;
+  width: 15%;
+  margin: 0.5em auto;
+  padding: 10px;
+  background-color: $color-green-soft;
+  color: $color-charcoal;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+
+  &:before {
+   content: '🐾';
+   padding-right: 0.5em;
+  }
 }

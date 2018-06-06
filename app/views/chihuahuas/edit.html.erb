@@ -1,0 +1,13 @@
+<div class="dog">
+  <h2><%= @dog.name %>'s mood</h2>
+  <div class="mood"><%= @dog.mood %></div>
+  <h2>Time alive:</h2>
+  <div><%= @dog.alive_time %> hour(s)</div>
+
+  <%= form_tag chihuahua_path(@dog.id), method: :put do %>
+    <%= submit_tag "Add an hour" %>
+  <% end %>
+</div>
+
+
+<%= link_to "Visit other dogs", chihuahuas_path, class: "return-button" %>

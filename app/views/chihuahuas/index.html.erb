@@ -1,12 +1,3 @@
 <% @dogs.each do |dog| %>
-  <div class="dog">
-    <h2>Your dog's mood</h2>
-    <p class="mood"><%= dog.mood_emoji %></p>
-    <h2>Time alive:</h2>
-    <p><%= dog.alive_time %> hours</p>
-
-    <%= form_tag chihuahua_path(dog.id), method: :put do %>
-      <%= submit_tag "Add an hour", class: "increment_time_alive" %>
-    <% end %>
-  </div>
+  <%= link_to "Visit #{dog.name}", edit_chihuahua_path(dog.id), class: "select-dog" %>
 <% end %>
