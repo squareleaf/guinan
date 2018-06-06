@@ -11,7 +11,13 @@ class ChihuahuasController < ApplicationController
     @dog = Chihuahua.find(params[:id])
 
     @dog.alive_time += 1
-    @dog.mood = "😿"
+
+    if params['pet'] || params['feed'] || params['walk']
+      @dog.mood = "😺"
+    else
+      @dog.mood = "😿"
+    end
+
     @dog.save
 
     redirect_to edit_chihuahua_path(@dog.id)

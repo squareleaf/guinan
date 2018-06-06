@@ -5,6 +5,21 @@
   <div><%= @dog.alive_time %> hour(s)</div>
 
   <%= form_tag chihuahua_path(@dog.id), method: :put do %>
+    <ul>
+      <li>
+        <%= check_box_tag "pet" %>
+        <%= label_tag "pet", "Pet #{@dog.name}" %>
+      </li>
+      <li>
+        <%= check_box_tag "feed" %>
+        <%= label_tag "feed", "Feed #{@dog.name}" %>
+      </li>
+      <li>
+        <%= check_box_tag "walk" %>
+        <%= label_tag "walk", "Walk #{@dog.name}" %>
+      </li>
+    </ul>
+
     <%= submit_tag "Add an hour" %>
   <% end %>
 </div>
