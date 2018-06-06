@@ -1,0 +1,8 @@
+<h1><% @dogs.each do |dog| %></h1>
+  Your dog's mood
+  <p><%= dog.mood_emoji %></p>
+
+  <% form_tag edit_home_path, method: :put %>
+    <% submit_tag "Add an hour", class: "increment_time_alive" %>
+  <% end %>
+<% end %>
